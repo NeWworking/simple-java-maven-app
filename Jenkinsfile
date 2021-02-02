@@ -5,19 +5,19 @@ pipeline{
     environment{
         a="10"
     }
-    maven{
-        label 'maven323'
+    tools{
+        maven 'maven323'
     }
     stages{
         stage('build'){
             steps{
-                sh 'mvn -version'
-                sh 'mvn clean install'
+                sh "mvn -version"
+                sh "mvn clean install"
             }
         }
         stage('post build'){
             steps{
-                sh 'echo "build is successful"'
+                sh 'echo "build is successful: $a"'
             }
         }
     }
