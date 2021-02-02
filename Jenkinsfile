@@ -6,7 +6,7 @@ pipeline{
         a="10"
     }
     tools{
-        maven 'maven323'
+        maven 'maven363'
     }
     stages{
         stage('build'){
