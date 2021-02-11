@@ -1,8 +1,5 @@
 pipeline{
-    agent{
-        label 'agent1'
-    }
-    environment{
+        environment{
         a="10"
     }
     tools{
